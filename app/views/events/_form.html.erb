@@ -4,10 +4,12 @@
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control' %>
   </div>
-  <div class="mb-3">
-    <%= f.label :only_woman, class: 'form-check-label' %>
-    <%= f.check_box :only_woman, class: 'form-check-input' %>
-  </div>
+  <% if current_user.gender == 2 %>
+    <div class="mb-3">
+      <%= f.label :only_woman, class: 'form-check-label' %>
+      <%= f.check_box :only_woman, class: 'form-check-input' %>
+    </div>
+  <% end %>
   <div class="mb-3">
     <%= f.label :content %>
     <%= f.text_area :content, class: 'form-control', rows: 10 %>
