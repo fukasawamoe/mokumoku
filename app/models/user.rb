@@ -17,8 +17,10 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
-
+  validates :gender, presence: true
   validates :email, uniqueness: true
+
+  enum genders: { other: 0, male: 1, female: 2 }
 
   scope :allowing_created_event_notification,
         -> { joins(:notification_timings).merge(NotificationTiming.created_event) }

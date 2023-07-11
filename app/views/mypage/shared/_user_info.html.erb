@@ -15,7 +15,8 @@
           <h2 class="mb-0">
             <%= current_user.name %>
           </h2>
-          <p class="mb-0 d-block"><%= current_user.email %></p>
+          <p class="mb-0 d-block"><%= current_user.email %></p></br>
+          <p class="mb-0 d-block"><%= t("enums.user.genders.#{User.genders.key(current_user.gender)}") %></p>
         </div>
       </div>
     </div>
