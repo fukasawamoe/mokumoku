@@ -95,7 +95,7 @@
                               method: :delete,
                               data: { confirm: 'キャンセルします' }
                   %>
-                <% elsif @event.only_woman? && current_user.gender == 2 %>
+                <% elsif @event.only_woman? && current_user.gender == 'woman' %>
                   <%= link_to 'このもくもく会に参加する',
                               event_attendance_url(@event),
                               class: 'btn btn-primary',
