@@ -3,8 +3,8 @@ ja:
     user:
       genders:
         other: 'その他'
-        man: '男性'
-        woman: '女性'
+        male: '男性'
+        female: '女性'
     notification_timing:
       timing:
         created_event: イベントが作成された時

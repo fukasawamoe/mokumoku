@@ -24,12 +24,13 @@ class EventsController < ApplicationController
   end
 
   def new
+    binding.pry
     @event = Event.new
   end
 
   def create
     @event = current_user.events.build(event_params)
-    if @event.save
+    if @event.save!
       User.all.find_each do |user|
         NotificationFacade.created_event(@event, user)
       end
