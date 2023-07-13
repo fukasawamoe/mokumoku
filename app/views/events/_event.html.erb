@@ -8,7 +8,7 @@
         <%= link_to event.title, event_path(event)  %>
       </h4>
       <% if event.only_woman? %>
-        <p class="card-text fw-bold"><%= '女性限定' %></p>
+        <p class="card-text fw-bold">女性限定</p>
       <% end %>
       <p class="card-text"><%= event.content %></p>
       <hr />
