@@ -40,7 +40,7 @@
         </div>
         <div class="mb-3">
           <%= f.label :gender, class: 'form-label' %>
-          <%= f.select :gender, User.genders_i18n.invert.map{|key, value| [key, User.genders[value]]}, {}, class: 'form-control' %>
+          <%= f.select :gender, User.genders_i18n.invert.map{|key, value| [key, value]}, {}, class: 'form-control' %>
         </div>
         <div class="col-12">
           <!-- Button -->

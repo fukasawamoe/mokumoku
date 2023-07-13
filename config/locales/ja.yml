@@ -1,7 +1,7 @@
 ja:
   enums:
     user:
-      genders:
+      gender:
         other: 'その他'
         man: '男性'
         woman: '女性'
