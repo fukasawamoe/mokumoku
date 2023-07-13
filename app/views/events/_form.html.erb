@@ -4,7 +4,7 @@
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control' %>
   </div>
-  <% if current_user.gender == 'woman' %>
+  <% if current_user.woman? %>
     <div class="mb-3">
       <%= f.label :only_woman, class: 'form-check-label' %>
       <%= f.check_box :only_woman, class: 'form-check-input' %>
